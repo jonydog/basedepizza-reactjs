@@ -1,0 +1,62 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!--  SIDEBAR -->
+	<div class="col-xs-3 col-sm-3 col-md-3 sidebar">
+		<div class="navbar-header text-center brand">
+		    <a class="navbar-brand" href="#">Horus</a>
+		</div><!-- /navbar-header -->
+		
+		<ul class="nav nav-sidebar" th:fragment="dashboard">
+                <li class="active">
+                    <a href="#">
+                        <i class="fa fa-users"></i> 
+                        <span class="hidden-xs">Followers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-compass"></i>
+                        <span class="label label-default hidden-xs">#lucky AND #blessed</span>
+                    </a>
+                </li>
+                
+            </ul>
+			    <div th:text="${AdviceTestString}"></div>
+	    <ul class="nav nav-sidebar" th:fragment="social">
+                <li  class="active">
+                    <a href="#">
+                        <i class="fa fa-edit"></i> 
+                        <span class="hidden-xs">New post</span>
+                    </a>
+                </li>
+                <li>
+                    <a th:href="@{/scheduled}">
+                        <i class="fa fa-calendar"></i>
+                        <span class="hidden-xs">Scheduled</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="social/drafts">
+                        <i class="fa fa-file-o"></i>
+                        <span class="hidden-xs">Drafts</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa fa-pie-chart"></i>
+                        <span class="hidden-xs">Analytics</span>
+                    </a>
+                </li>
+                
+            </ul>
+			  
+	</div>
+	<!-- /SIDEBAR -->
+
+
+</body>
+</html>

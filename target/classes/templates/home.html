@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html layout:decorator="layout" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div layout:fragment="content">
+	    <div class="row dashboard-filter-menu">
+		    <div class="col-xs-12 col-sm-6">
+		        <div class="form-inline">
+		            <div clss="form-group">
+		                <label for="daterange1" class="hidden-xs hidden-md">Time range &nbsp;</label> 
+		                <div class="input-group">
+		                    <div class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></div>
+		                    <input id="daterange1" class="form-control" name="daterange" value="01/01/2017 12:00 até 01/01/2017 14:00" />
+		                </div>
+		            </div>
+		        </div>      
+		    </div>
+		
+		    <div class="col-xs-12 col-sm-6">
+		        <div class="dropdown pull-right">
+		            <button class="btn btn-default dropdown-toggle" type="button" id="filterDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		                Add to dashboard
+		                <span class="caret"></span>
+		            </button>
+		            <ul class="dropdown-menu filter-menu" aria-labelledby="filterDropdown">
+		                <li><a href="#">Raw <i class="glyphicon glyphicon-ok pull-right"></i></a></li>
+		                <li><a href="#">Influence</a></li>
+		                <li><a href="#">Likes</a></li>
+		                <li><a href="#">Sentiment</a></li>
+		                <li><a href="#">Links</a></li>
+		                <li><a href="#">Photos</a></li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		
+		<div class="row">
+		 <!-- panel -->
+			<div class="col-xs-12 col-md-6 col-lg-6">
+			    
+			    <div class="panel panel-default">
+			        <div class="panel-heading">Sentiment :: Most positive
+			                <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
+			                    <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
+			                </div>
+			            </div>
+			        <div class="panel-body">
+			            <!-- item -->
+			            <div class="row item">
+			                <div class="col-xs-1 thumb">
+			                    <img src="https://pbs.twimg.com/profile_images/529297979744600065/0UJnJADo.png" alt="userphoto" class="img-responsive" />
+			                </div>
+			                <div class="col-xs-11 item-content">
+			                    <p class="author"><a href="#">paula10br</a></p>
+			                    <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+			                    <div class="metadata col-xs-8">
+			                        <span class="timestamp">34 sec ago</span>
+			                        <span class="from">Twitter for iPhone</span>
+			                    </div>
+			                    <div class="info col-xs-4 text-right">
+			                        info: <span>0.921</span>
+			                    </div>
+			                </div>
+			            </div><!-- item -->
+			            <!-- item -->
+			            <div class="row item">
+			                <div class="col-xs-1 thumb">
+			                    <img src="https://pbs.twimg.com/profile_images/529297979744600065/0UJnJADo.png" alt="userphoto" class="img-responsive" />
+			                </div>
+			                <div class="col-xs-11 item-content">
+			                    <p class="author"><a href="#">paula10br</a></p>
+			                    <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+			                    <div class="metadata col-xs-8">
+			                        <span class="timestamp">34 sec ago</span>
+			                        <span class="from">Twitter for iPhone</span>
+			                    </div>
+			                    <div class="info col-xs-4 text-right">
+			                        info: <span>0.921</span>
+			                    </div>
+			                </div>
+			            </div><!-- item -->
+			            <!-- item -->
+			            <div class="row item">
+			                <div class="col-xs-1 thumb">
+			                    <img src="https://pbs.twimg.com/profile_images/529297979744600065/0UJnJADo.png" alt="userphoto" class="img-responsive" />
+			                </div>
+			                <div class="col-xs-11 item-content">
+			                    <p class="author"><a href="#">paula10br</a></p>
+			                    <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+			                    <div class="metadata col-xs-8">
+			                        <span class="timestamp">34 sec ago</span>
+			                        <span class="from">Twitter for iPhone</span>
+			                    </div>
+			                    <div class="info col-xs-4 text-right">
+			                        info: <span>0.921</span>
+			                    </div>
+			                </div>
+			            </div><!-- item -->  
+			
+			
+			            <div class="row">
+			                <div class="col-xs-12 text-center">
+			                    <button class="btn btn-primary">View all influencers</button>
+			                </div>
+			            </div>                              
+			        </div>
+			    </div>
+			</div>
+			<!-- /panel -->
+			
+			<!-- panel -->
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">Top influencers
+                        <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <!-- item -->
+                        <div class="row item">
+                            <div class="col-xs-1 thumb">
+                                <img src="https://pbs.twimg.com/profile_images/459246575441543170/VhmZtJDb.png" alt="userphoto" class="img-responsive" />
+                            </div>
+                            <div class="col-xs-11 item-content">
+                                <p class="author"><a href="#">paula10br</a></p>
+                                <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+                                <div class="metadata col-xs-6">
+                                    <span class="timestamp">34 sec ago</span>
+                                    <span class="from">Twitter for iPhone</span>
+                                </div>
+                                <div class="info col-xs-6 text-right">
+                                    Followers: <span>31.746.272</span>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                        <!-- item -->
+                        <div class="row item">
+                            <div class="col-xs-1 thumb">
+                                <img src="https://pbs.twimg.com/profile_images/737635690872221696/ZZarGddH.jpg" alt="userphoto" class="img-responsive" />
+                            </div>
+                            <div class="col-xs-11 item-content">
+                                <p class="author"><a href="#">paula10br</a></p>
+                                <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+                                <div class="metadata col-xs-8">
+                                    <span class="timestamp">34 sec ago</span>
+                                    <span class="from">Twitter for iPhone</span>
+                                </div>
+                                <div class="info col-xs-4 text-right">
+                                    info: <span>0.921</span>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+                        <!-- item -->
+                        <div class="row item">
+                            <div class="col-xs-1 thumb">
+                                <img src="https://pbs.twimg.com/profile_images/529297979744600065/0UJnJADo.png" alt="userphoto" class="img-responsive" />
+                            </div>
+                            <div class="col-xs-11 item-content">
+                                <p class="author"><a href="#">paula10br</a></p>
+                                <p>Lorem ipsum dolor sit amet <a href="#">@consectetur</a> adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.</p>
+                                <div class="metadata col-xs-8">
+                                    <span class="timestamp">34 sec ago</span>
+                                    <span class="from">Twitter for iPhone</span>
+                                </div>
+                                <div class="info col-xs-4 text-right">
+                                    info: <span>0.921</span>
+                                </div>
+                            </div>
+                        </div><!-- item -->
+
+
+                        <div class="row">
+                            <div class="col-xs-12 text-center">
+                                <button class="btn btn-primary">View all influencers</button>
+                            </div>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+            <!-- /panel -->
+            
+             <div class="col-xs-12 col-md-12 col-lg-12">
+	             <div class="panel panel-default">
+	                 <div class="panel-heading">Sentiment
+	                     <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
+	                         <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
+	                     </div>
+	                 </div>
+	                 <div class="panel-body">
+	                     <div class="col-xs-12">
+	                         <canvas id="myChart" style="width:100%; height:100%;"></canvas>
+	                     </div>
+	                 </div>
+	             </div>
+	         </div>
+	
+	         <div class="col-xs-12 col-md-6 col-lg-8">
+	             <div class="panel panel-default shadow">
+	                 <div class="panel-heading">Top external Links
+	                     <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
+	                         <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-remove"></i></button>
+	                     </div>
+	                 </div>
+	                 <div class="panel-body">
+	                     <ul class="list-unstyled">
+	                         <li>
+	                             <a href="https://mva.microsoft.com/en-us/training-courses/developing-in-html5-with-javascript-and-css3-jump-start-8223?l=33AY4lIy_504984382" target="_blank"><i class="glyphicon glyphicon-new-window"></i> https://mva.microsoft.com/en-us/training-courses/developing...</a>
+	                         </li>
+	                         <li>
+	                             <a href="http://www.agap2.pt" target="_blank"><i class="glyphicon glyphicon-new-window"></i> http://www.agap2.pt</a>
+	                         </li>
+	                         <li>
+	                             <a href="https://mva.microsoft.com/en-us/training-courses/developing-in-html5-with-javascript-and-css3-jump-start-8223?l=33AY4lIy_504984382" target="_blank"><i class="glyphicon glyphicon-new-window"></i> https://mva.microsoft.com/en-us/training-courses/developing...</a>
+	                         </li>
+	                         <li>
+	                             <a href="https://mva.microsoft.com/en-us/training-courses/developing-in-html5-with-javascript-and-css3-jump-start-8223?l=33AY4lIy_504984382" target="_blank"><i class="glyphicon glyphicon-new-window"></i> https://mva.microsoft.com/en-us/training-courses/developing...</a>
+	                         </li>
+	                         <li>
+	                             <a href="https://mva.microsoft.com/en-us/training-courses/developing-in-html5-with-javascript-and-css3-jump-start-8223?l=33AY4lIy_504984382" target="_blank"><i class="glyphicon glyphicon-new-window"></i> https://mva.microsoft.com/en-us/training-courses/developing...</a>
+	                         </li>
+	                     </ul>
+	                 </div>
+	             </div>
+	         </div>
+		</div>
+    </div>
+ 
+</body>
+</html>

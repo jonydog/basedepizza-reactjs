@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Horus - register success</title>
+
+<link type="text/css" rel="stylesheet"
+	href="webjars/uikit/2.18.0/css/uikit.css"></link>
+
+<link type="text/css" rel="stylesheet" href="css/estilos.css"></link>
+</head>
+<body>
+	<div th:include="header :: copy"></div>
+	
+	<div class="space"></div>
+	<div class="space"></div>
+	<!-- Container central -->
+
+	<div class="uk-vertical-align uk-text-center uk-height-1-1">
+		<div class="uk-vertical-align-middle">
+
+			<h2>
+				
+				<div class="bannerGreenTitle">
+					<div id="align">
+						<div class="uk-icon uk-icon-large uk-icon-check"></div>
+					</div>
+				</div>
+				<strong>
+					<hr></hr>
+					<p th:text="#{registerSuccess.title}"></p>
+					<hr></hr>
+				</strong>
+				<h3><p th:text="#{registerSuccess.thanks}"></p></h3>
+				
+			</h2>
+		</div>
+		<p />
+		<h4>
+			<p th:text="#{registerSuccess.message}"></p>
+		</h4>
+		<h5>
+			<a href="login"><p th:text="#{registerSuccess.link}"></p></a>
+		</h5>
+	</div>
+	
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div th:include="footer :: copy"></div>
+</body>
+</html>

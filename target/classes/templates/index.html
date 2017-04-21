@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Horus</title>
+		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/assets/css/main.css" />
+		
+	
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+
+				<!-- Logotipo -->
+					<h1 id="logo">HORUS</h1>
+					
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro">Inicio</a></li>
+							<li><a href="#one"><span th:text="#{index.why}"></span></a></li>
+							<li><a href="#two"><span th:text="#{index.what}"></span></a></li>
+							<li><a href="#three"><span th:text="#{index.how}"></span></a></li>
+							<li><a href="#details"><span th:text="#{index.details}"></span></a></li>
+							<li><a href="#contact"><span th:text="#{footer.contacts}"></span></a></li>							
+							<li><span>|</span></li>
+							<li><a href="login"><span th:text="#{login.title}"></span></a></li>
+						</ul>
+					</nav>
+
+			</header>
+
+		<!-- Intro -->
+			<section id="intro" class="main style1 dark fullscreen">
+				<div class="content container 75%">
+					<header>
+						<h2>Horus</h2>
+					</header>
+					<span th:text="#{index.Horus.FirstDescription1}"></span>
+					<span><strong>HORUS</strong></span>
+					<span th:text="#{index.Horus.FirstDescription2}"></span>
+					<p/>
+					<a href="/login" class="button style2"><span th:text="#{login.title}"></span></a>
+					<a href="/register" class="button style2"><span th:text="#{login.newUser}"></span></a>
+					
+					<footer>
+					<p/>
+						<a href="#one" class="button style2 down">More</a>						
+					</footer>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2 th:text="#{index.why}"></h2>
+					</header>					
+						<p th:text="#{index.whyDescription}"></p>
+				</div>				
+				<a href="#two" class="button style2 down anchored">Next</a>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 left dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2 th:text="#{index.what}"></h2>
+					</header>
+					<p th:text="#{index.whatDescription}"></p>
+				</div>
+				<a href="#three" class="button style2 down anchored">Next</a>
+			</section>
+			
+		<!-- Three-->
+			<section id="three" class="main style2 right dark fullscreen">
+				<div class="content box style2">
+					<header>
+						<h2 th:text="#{index.how}"></h2>
+					</header>
+					<p th:text="#{index.howDescription}"></p>
+				</div>
+				<a href="#details" class="button style2 down anchored">Next</a>
+		</section>
+
+		<!-- DETAILS -->
+			<section id="details" class="main style3 primary">
+				<div class="content container">
+					<header>
+						<h2 th:text="#{index.details}"></h2>
+						<p th:text="#{index.detailsDescription}"></p>
+					</header>
+
+				
+				</div>
+			</section>
+
+		<!-- Contacts -->
+			<section id="contact" class="main style3 secondary">
+				<div class="content container">
+					<header>
+						<h2 th:text="#{footer.contacts}"></h2>
+						
+						<a href="http://www.agap2.com/pt-pt"><span class="label">www.agap2.com/pt-pt</span></a>
+						<p>Tel: +351 213 137 680</p>
+						<p>Email: lisboa@agap2.com</p>
+					</header>
+					
+				</div>
+			</section>
+
+		
+
+	</body>
+</html>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html layout:decorator="layout" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <body>		
+				<!-- PAGE CONTENT -->
+				<div class="col-xs-12 social" layout:fragment="content">
+				
+				
+
+				<div class="col-xs-12 col-md-12 col-lg-8 no-padding">
+				    <div class="col-xs-12 profile-select">
+				        <div class="dropdown pull-right">
+				          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				              Select profile
+				              <span class="caret"></span>
+				          </button>
+				          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				              <li><a href="#"><i class="fa fa-twitter"></i> @agap2</a></li>
+				              <li><a href="#"><i class="fa fa-twitter"></i> @BBDO</a></li>
+				              <li><a href="#"><i class="fa fa-twitter"></i> @McDonnals</a></li>
+				          </ul>
+				      </div>
+				    </div>
+				
+				  <!-- POST FORM -->
+					<div th:replace="components/postTweetForm"></div>                      
+			      <!-- /POST FORM -->
+				</div>
+				
+				
+			</div>
+				<!-- /PAGE CONTENT -->
+
+</body></html>

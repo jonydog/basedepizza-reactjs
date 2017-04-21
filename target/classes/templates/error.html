@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Horus</title>
+
+<link type="text/css" rel="stylesheet" th:href="@{/webjars/uikit/2.18.0/css/uikit.css}"></link>
+<link type="text/css" rel="stylesheet" th:href="@{/css/estilos.css}"></link>
+
+</head>
+
+<body>
+	<div th:include="header :: copy"></div>
+<!-- <div th:include="sessionDetails :: sessionDetailsFrag"></div> -->	
+	<div class="space"></div>
+	<!-- Container central -->
+	<div align="center">
+			<h2>				
+				<div class="bannerGreenTitle">
+					<div class="align">
+						<div class="iconFailure uk-icon uk-icon-large uk-icon-eye-slash"></div>
+					</div>
+				</div>
+				<hr></hr>
+				<strong>
+						<p th:text="#{errorPage.message.main}"></p>
+						
+				</strong>				
+				<hr></hr>
+			</h2>
+		
+		<p />
+		<div class="subHeaderRule">
+		<div class="space2"></div>
+			<p th:text="#{errorPage.message.secondary}"></p>
+			<div class="space2"></div>
+		</div>
+		<div class="subHeaderRuleColorTeal">
+			<a href="/home"><p th:text="#{errorPage.link.home}"></p></a>
+			<a href="/index"><p th:text="#{errorPage.link.index}"></p></a>
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div class="space"></div>
+	<div th:include="footer :: copy"></div>
+</body>
+</html>

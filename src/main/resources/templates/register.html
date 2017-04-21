@@ -1,0 +1,98 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Horus 2.0</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link type="text/css" rel="stylesheet" href="/css/horus.css" />    
+  </head>
+
+<body class="bg">
+	
+	<!-- Container central -->
+	<div class="wrapper">
+	  <div class="container-fluid">
+	    <div class="formWrapper">	    	
+	      <div class="formContainer">
+	      	<div class="alert alert-warning" role="alert" style="display:none">
+		  		<span th:each="err: ${errors}" th:text="#{${err}}"></span>
+		  	</div>
+		  	
+	      	<form class="uk-panel uk-panel-box uk-form" action="#" th:action="@{/register}" th:object="${registerForm}" method="post">
+	      		<h2 class="text-center"><span th:text="#{register.title}"></span></h2>
+	      		
+	      		<div th:text="${nome}" ></div>
+	      		
+	      		<!-- name -->
+	      			<div class="form-group">
+		              <label class="sr-only" for="name"><span th:placeholder="#{register.name}"></span></label>
+		              <div class="input-group">
+		                <div class="input-group-addon">
+		                  <i class="glyphicon glyphicon-user"></i>
+		                </div>
+		                <input type="text" class="form-control input-lg" required="" th:field="*{name}" th:placeholder="#{register.name}" />
+		              </div>
+		            </div>
+	      		<!-- /name -->
+	      		
+	      		<!-- email -->
+	      			 <div class="form-group">
+		              <label class="sr-only" for="email"><span th:text="#{register.email}"></span> </label>
+		              <div class="input-group">
+		                <div class="input-group-addon">
+		                  <i class="glyphicon glyphicon-envelope"></i>
+		                </div>
+		                <input type="email" class="form-control input-lg" required="" th:field="*{email}" th:placeholder="#{register.email}" />
+		              </div>
+		            </div>
+	      		<!-- /email -->
+	      		
+	      		<!-- password -->
+	      			<div class="form-group">
+	                 <label class="sr-only" for="password"><span th:text="#{register.password}"></span></label>
+	                 <div class="input-group">
+	                   <div class="input-group-addon">
+	                     <i class="glyphicon glyphicon-lock"></i>
+	                   </div>
+	                   <input type="password" required="" class="form-control input-lg" th:field="*{password}" th:placeholder="#{register.password}" />
+	                 </div>
+	              </div>
+	      		<!-- /password -->
+	      		
+	      		<!-- confirm password -->								
+				<div class="form-group">
+	                <label class="sr-only" for="password"><span th:text="#{register.confirmPassword}"></span></label>
+	                <div class="input-group">
+	                  <div class="input-group-addon">
+	                    <i class="glyphicon glyphicon-lock"></i>
+	                  </div>
+	                  <input type="password" required="" class="form-control input-lg" th:field="*{confirmPassword}" th:placeholder="#{register.confirmPassword}" />
+	                </div>
+	             </div>
+	      		<!-- /confirm password -->
+	      		
+	      		<!--  connect twitter account -->
+	      		<div class="form-group">
+        		    <button th:if="${hasTwitter} == false" class="btn btn-large btn-block btn-tw btn-primary" type="submit" name="action-save"><i class="fa fa-twitter-square"></i> Ligar conta do Twitter</button>
+        		    <button th:if="${hasTwitter} == true" class="btn btn-large btn-block btn-tw btn-success" disabled="" type="submit" name="action-save"><i class="fa fa-twitter-square"></i> Twitter sincronizado</button>
+		        </div>
+	      		<!--  /connect twitter account -->
+	      		
+	      		<!-- form footer -->
+	      			<div class="text-right">
+		                <span>Já tem conta? <a href="/login">Iniciar sessão</a></span>
+		                <Button class="btn btn-primary" type="submit" name="action-submit"><span th:text="#{register.register}"></span></Button>
+	                 </div>
+	      		<!-- /form footer -->
+	      	</form>
+	      </div>
+	    </div>
+	   </div>
+   </div>
+	
+</body>
+</html>

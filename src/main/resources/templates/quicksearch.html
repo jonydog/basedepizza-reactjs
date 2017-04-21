@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Horus</title>		
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->		
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+			
+	<style>
+    .top {
+        position:absolute;
+        left:0; right:0;
+        height: 92px;
+    }
+    .left {
+        position:absolute;
+        left:0; top:92px; bottom: 0;
+        width: 178px;
+    }
+    .main {
+        position: absolute;
+        left:178px; top:92px; right:0; bottom:0;
+    }
+
+.top { background: blue; }
+.left { background: red; }
+.main { background: yellow; }
+        #header {
+		position: fixed;
+		z-index: 10000;
+		left: 0;
+		top: 0;
+		width: 100%;
+		background: #000000;
+		
+		height: 3em;
+		line-height: 3em;
+		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+	}
+
+	body {
+		padding-top: 3em;
+	}
+
+	#logo {
+		position: absolute;
+		left: 1em;
+		top: 0;
+		height: 3em;
+		line-height: 3em;
+		letter-spacing: -1px;
+		color:white;
+		
+	}
+
+		#logo a {
+			font-size: 1.25em;
+		}
+
+	#nav {
+		position: absolute;
+		right: 0.5em;
+		top: 0;
+		height: 3em;
+		line-height: 3em;
+		color:white;
+	}
+
+		#nav ul {
+			margin: 0;
+		}
+
+			#nav ul li {
+				display: inline-block;
+				margin-left: 0.5em;
+				font-size: 0.9em;
+			}
+
+				#nav ul li a {
+					display: block;
+					color: inherit;
+					text-decoration: none;
+					height: 3em;
+					line-height: 3em;
+					padding: 0 0.5em 0 0.5em;
+					outline: 0;
+				}
+        
+        
+        </style>
+	</head>
+	<body>
+                <div class="top">
+                	<div th:include="header"></div>       
+     			</div>
+            <div class="left">
+                LEFT MENU
+            </div>
+            <div class="main">
+                
+                <form action="register">
+				  Hashtag:<br></br>
+				  <input type="text" name="hashtags" value="#hashtag"> </input>
+				  <input type="submit" value="Submit"> </input>
+				</form>
+                
+            </div>
+
+	</body>
+</html>
+
+
+
+
+	
+
+
+

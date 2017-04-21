@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+
+
+<!-- POST FORM -->
+<div class="col-xs-12 no-padding post-form" th:fragment="postTweetForm">
+	<div class="hidden-xs col-sm-1 no-padding">
+	    <img src="https://pbs.twimg.com/profile_images/767353498019176448/IFfmkpC6.jpg" class="img-responsive" />
+	</div>
+
+	<div class="col-xs-12 col-sm-11">
+	    <textarea class="form-control post-textarea countChars noresize"></textarea>
+	    <div class="col-xs-12 no-padding">
+	        <div class="col-xs-12 no-padding form-control-actions">
+	            <div class="pull-left">
+	                <ul class="list-inline">
+	                    <li><label for="mediaInput" data-toggle="tooltip" data-placement="top" title="Attach file">
+	                        <i class="fa fa-paperclip"></i>
+	                        <input name="mediaInput" id="mediaInput" type="file" accept="image/gif,image/jpeg,image/jpg,image/png,video/mp4,video/x-m4v" class="hidden" /></label></li>
+	                    
+	                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Save as draft"><i class="fa fa-file-o"></i> </a></li>
+	                    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Add location"><i class="fa fa-map-marker"></i> </a></li>
+	
+	                    <li class="schedule-wrapper">
+	                    <div class="schedule-container">
+	                        <label for="postCalendar" data-toggle="tooltip" data-placement="top" title="Schedule">
+	                            <i class="fa fa-calendar"></i>
+	                        </label>
+	                        <input type="text" name="calendar" id="postCalendar" class="form-control" />
+	                    </div>
+	                    </li>
+	                </ul>
+	            </div>                                    
+	            <div class="pull-right button-container">
+	                <button class="btn btn-primary">Publish</button>
+	            </div>
+	
+	            <div class="pull-right charcount-container">
+	                <span class="charNum">0</span> / 140
+	            </div>
+	
+	        </div>
+	    </div>
+	</div>
+</div>                        
+<!-- /POST FORM -->
+
+</body>
+</html>

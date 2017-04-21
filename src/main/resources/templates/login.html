@@ -1,0 +1,68 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Horus 2.0</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+    <link type="text/css" rel="stylesheet" href="css/horus.css" />    
+  </head>
+  
+  <body class="bg">	
+<!-- Container central -->
+  
+<div class="wrapper">
+	<div class="container-fluid">
+    	<div class="formWrapper">	    	
+			<div class="formContainer">
+				<form class="uk-panel uk-panel-box uk-form" action="#" th:action="@{/login}" th:object="${loginForm}" method="post">
+	    			<h2 class="text-center"><span th:text="#{login.title}"></span></h2>
+	    
+					<div class="alert alert-warning" role="alert" th:if="${param.error}">
+					  <p th:text="#{loginErrors.errors}"></p>
+					</div>
+					
+					<!-- email -->
+	      			<div class="form-group">
+		              <label class="sr-only" for="name"><span>E-mail</span></label>
+		              <div class="input-group">
+		                <div class="input-group-addon">
+		                  <i class="glyphicon glyphicon-envelope"></i>
+		                </div>
+		                <input class="form-control input-lg" name="email" type="email" th:field="*{email}" placeholder="Email" />
+		              </div>
+		            </div>
+		      		<!-- /email -->
+		      		
+		      		<!-- email -->
+	      			<div class="form-group">
+		              <label class="sr-only" for="name"><span>Password</span></label>
+		              <div class="input-group">
+		                <div class="input-group-addon">
+		                  <i class="glyphicon glyphicon-lock"></i>
+		                </div>
+		                <input class="form-control input-lg" name="password" type="password" th:field="*{password}" placeholder="Password" />
+		              </div>
+		            </div>
+		      		<!-- /email -->
+		      		
+		      		<!-- form footer -->
+	      			<div class="text-right">
+		                <span >Ainda não tem conta? <a href="/register" th:text="#{login.newUser}">Registe-se</a></span>
+		                <Button class="btn btn-primary" type="submit"><span th:text="#{login.enter}"></span></Button>
+	                 </div>
+		      		<!-- /form footer -->
+	   			</form>
+	  		</div>
+	 	</div>	
+	</div>
+ </div>
+ 
+ </body>
+</html>

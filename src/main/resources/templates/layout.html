@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:replace="/fragments/header"></div>
+
+<div class="container-fluid">
+
+<div th:replace="'fragments/'+${sidebarname}"></div>	
+	
+	<!-- CONTAINER -->
+	<div class="col-xs-9 col-sm-9 col-md-9 main" id="container">
+		<div class="row">
+		<div th:replace="fragments/topmenu"></div>
+		</div>
+		
+		<div th:replace="fragments/breadcrumbs"></div>
+		
+		<div class="col-xs-12">
+			<div layout:fragment="content"></div>
+		</div>
+	</div>
+	<!-- /CONTAINER -->
+	
+</div>
+       
+<div th:replace="/fragments/footer"></div>
+
+</body>
+</html>
+
+
+
